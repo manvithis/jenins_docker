@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build dockerfile') {
             steps {
-                sh 'docker build –t=”mywebserver” .'
+                sh 'docker build -t mytag .'
                 
             }
     }
