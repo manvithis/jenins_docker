@@ -10,8 +10,13 @@ pipeline {
             steps {
                 echo 'unit test'
                 
-            }
+            }  
         }
+        stage('Build dockerfile') {
+            steps {
+                sh 'sudo docker build –t=”mywebserver” .'
+                
+            }
     }
 }
 
