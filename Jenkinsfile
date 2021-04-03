@@ -21,7 +21,13 @@ pipeline {
         stage('dockerfile Testing') {
             steps {
                 sh 'docker run -d -p 80:80 mytag'
-                
+                echo "testing"
+            }
+        }
+         stage('docker repository save==dockerhub/ECR') {
+            steps {
+                sh 'docker run -d -p 80:80 mytag'
+  
             }
         }
 }
