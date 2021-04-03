@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build dockerfile') {
             steps {
-                sh 'docker build -t mytag .'
+                sh 'sudo docker build -t mytag .'
                 
             }
     }
